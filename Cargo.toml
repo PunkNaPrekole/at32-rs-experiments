@@ -1,0 +1,16 @@
+[package]
+name = "at32home"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+cortex-m = "0.7.7"
+cortex-m-rt = "0.7.5"
+embedded-dht-rs = { version = "0.5.0", features = ["dht11"] }
+embedded-hal = "1.0.0"
+panic-halt = "1.0.0"
+
+[profile.release]
+codegen-units = 1
+debug = true
+lto = true
